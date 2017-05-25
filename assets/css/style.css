@@ -1,0 +1,14 @@
+body {
+	background-image: url("../img/background.jpg");
+}
+img {
+	height: 100px;
+	width: 75px;
+	margin: 16px 48px;
+}
+.img{
+	float: left;
+}
+.clear {
+	clear: both;
+}
