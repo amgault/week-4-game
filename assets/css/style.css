@@ -4,10 +4,12 @@ body {
 img {
 	height: 100px;
 	width: 75px;
-	margin: 16px 48px;
+	margin: 0px 48px;
 }
 .img{
 	float: left;
+	background: white;
+	border: 2px solid red;
 }
 .clear {
 	clear: both;
