@@ -62,6 +62,7 @@ var game = {
 		else {
 			this.selectedEnemy = name;
 			this.moveDefender(name);
+			this.remainingEnemies(name);
 			console.log(this.selectedEnemy);
 		}
 		console.log("yes");
@@ -86,7 +87,18 @@ var game = {
 	},
 
 	moveDefender: function(name) {
-		$('#defender').append(this.characters[this.selectedEnemy].button);
+		$('#defender').html(this.characters[this.selectedEnemy].button);
+	},
+
+	remainingEnemies: function(name) {
+
+		$('#enemies').html("");
+		this.availableEnemies.splice(this.availableEnemies.indexOf(name), 1);
+		console.log(this.availableEnemies);
+		for (var i = 0; i < this.availableEnemies.length; i++) {
+			console.log(this.characters[this.availableEnemies[i]].button);
+			$('#enemies').append(this.characters[this.availableEnemies[i]].button);
+		}
 	},
 
 	// Plays out an attack when the button is pressed
@@ -143,25 +155,7 @@ var game = {
 
 	// When the restart button is pressed, we reset all of our initial values
 	restartGame: function () {
-
-		this.characters.mario.currentHP = this.characters.mario.healthPoints;
-		this.characters.luigi.currentHP = this.characters.luigi.healthPoints;
-		this.characters.peach.currentHP = this.characters.peach.healthPoints;
-		this.characters.toad.currentHP = this.characters.toad.healthPoints;
-
-		$(this.characters.mario.div).html(this.characters.mario.healthPoints);
-		$(this.characters.luigi.div).html(this.characters.luigi.healthPoints);
-		$(this.characters.peach.div).html(this.characters.peach.healthPoints);
-		$(this.characters.toad.div).html(this.characters.toad.healthPoints);
-		$('#message').html(" ");
-
-		this.characters[this.yourCharacter].attackPower = this.characters[this.yourCharacter].counterAttackPower;
-		this.yourCharacter = null;
-		this.selectedEnemy = null;
-		this.defeatedEnemies = [];
-		this.isReady = false;
-
-		$('#restart').hide();
+		location.reload();
 
 	}
 
@@ -175,6 +169,10 @@ $(document).ready(function() {
 
 	// character buttons
 	$('.img').on('click', function() {
+		game.setupGame(this.value);	
+ 	});
+
+ 	$('#enemies').on('click', '.img', function() {
 		game.setupGame(this.value);	
  	});
 
