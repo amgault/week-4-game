@@ -137,7 +137,7 @@ var game = {
 		this.enemiesDefeated.push(this.selectedEnemy);
 		if(this.enemiesDefeated.length !== 3) {
 			$('#restart').show();
-			$('#message').html("<p>You have defeated " + this.characters[this.selectedEnemy].name + ". You can choose to fight another defender.</p>");
+			$('#message').html("<p>You have defeated " + this.characters[this.selectedEnemy].name + ". Chooseyour next defender.</p>");
 		}
 		else {
 			$('#message').html("<p>YOU WON!!! GAME OVER!!</p>");
