@@ -15,27 +15,30 @@
 		</header>
 
 		<div>
-			<div>
-				<div class="img" id="image">
-					<p style="text-align: center; line-height: 0%;">Mario</p>
+			<div id="first">
+				<button class="img" id="mario img" value="mario">
+					<p style="text-align: center;">Mario</p>
 					<img src="assets/img/mario.png">
-					<p style="text-align: center; line-height: 0%;">120</p>
-				</div>
-				<div class="img" id="image">
-					<p style="text-align: center; line-height: 0%;">Luigi</p>
+					<p id="marioHP" style="text-align: center;">120</p>
+				</button>
+
+				<button class="img" id="luigi img" value="luigi">
+					<p style="text-align: center;">Luigi</p>
 					<img src="assets/img/luigi.png">
-					<p style="text-align: center; line-height: 0%;">100</p>
-				</div>
-				<div class="img" id="image">
-					<p style="text-align: center; line-height: 0%;">Peach</p>
+					<p id="luigiHP" style="text-align: center;">100</p>
+				</button>
+
+				<button class="img" id="peach img" value="peach">
+					<p style="text-align: center;">Peach</p>
 					<img src="assets/img/peach.png">
-					<p style="text-align: center; line-height: 0%;">150</p>
-				</div>
-				<div class="img" id="image">
-					<p style="text-align: center; line-height: 0%;">Toad</p>
+					<p id="peachHP" style="text-align: center;">150</p>
+				</button>
+
+				<button class="img" id="toad img" value="toad">
+					<p style="text-align: center;">Toad</p>
 					<img src="assets/img/toad.png">
-					<p style="text-align: center; line-height: 0%;">180</p>
-				</div>
+					<p id="toadHP" style="text-align: center;">180</p>
+				</button>
 
 			</div>
 
@@ -43,41 +46,41 @@
 				Your Character
 			</div>
 
-			<div>
+			<div id="yourCharacter">
 				<!-- <img src="#"> -->
 			</div>
 
-			<div>
+			<div class="clear">
 				Enemies available to attack.
 			</div>
 
-			<div>
+			<div id="enemies">
 				<!-- <img src="#">
 				<img src="#">
 				<img src="#"> -->
 			</div>
 
-			<div>
+			<div class="clear">
 				Fight Section
 			</div>
 			
-			<button>
+			<button id="attack">
 				Attack
 			</button>
 
-			<div>
+			<div class="clear">
 				Defender
 			</div>
 
-			<div>
+			<div id="defender">
 				<!-- <img src="#"> -->
 			</div>
 
-			<div>
-				Message
+			<div class="clear" id="message">
+				<p></p>
 			</div>
 
-			<button>
+			<button id="restart">
 				Restart
 			</button>
 
@@ -87,7 +90,7 @@
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 
 		<!-- Script -->
-		<script type="text/javascript" src="write.js"></script>
+		<script type="text/javascript" src="assets/js/write.js"></script>
 		
 	</body>
 
