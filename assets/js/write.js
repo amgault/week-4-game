@@ -64,11 +64,10 @@ var game = {
 			this.moveDefender(name);
 			console.log(this.selectedEnemy);
 		}
-
+		console.log("yes");
 		if(this.yourCharacter != null && this.selectedEnemy != null) {
 			this.isReady = true;
 		}
-
 		
 	},
 
@@ -81,7 +80,7 @@ var game = {
 		this.availableEnemies.splice(this.availableEnemies.indexOf(name), 1);
 		console.log(this.availableEnemies);
 		for (var i = 0; i < this.availableEnemies.length; i++) {
-			console.log(this.availableEnemies[i]);
+			console.log(this.characters[this.availableEnemies[i]].button);
 			$('#enemies').append(this.characters[this.availableEnemies[i]].button);
 		}
 	},
